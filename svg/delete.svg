@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY st0 "fill:url(#SVGID_1_);">
+	<!ENTITY st1 "fill:url(#SVGID_2_);">
+	<!ENTITY st2 "fill:#FFFFFF;">
+]>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="28.625px" height="28.625px" viewBox="0 0 28.625 28.625" style="enable-background:new 0 0 28.625 28.625;"
+	 xml:space="preserve">
+<g>
+	<g>
+		
+			<radialGradient id="SVGID_1_" cx="22.6719" cy="38.3672" r="13.521" gradientTransform="matrix(1 0 0 -1 -8.3599 52.6797)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#424142"/>
+			<stop  offset="0.71" style="stop-color:#424142"/>
+			<stop  offset="0.7427" style="stop-color:#484748;stop-opacity:0.8873"/>
+			<stop  offset="0.7862" style="stop-color:#595859;stop-opacity:0.7371"/>
+			<stop  offset="0.836" style="stop-color:#747474;stop-opacity:0.5655"/>
+			<stop  offset="0.8903" style="stop-color:#9B9A9B;stop-opacity:0.3782"/>
+			<stop  offset="0.9477" style="stop-color:#CCCCCC;stop-opacity:0.1805"/>
+			<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+		</radialGradient>
+		<circle style="&st0;" cx="14.312" cy="14.313" r="13.521"/>
+		<g>
+			
+				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="31.0322" y1="768.0781" x2="31.0322" y2="789.0781" gradientTransform="matrix(1 0 0 1 -16.7197 -764.2656)">
+				<stop  offset="0" style="stop-color:#D4666E"/>
+				<stop  offset="0.5" style="stop-color:#CB424D"/>
+				<stop  offset="0.5" style="stop-color:#BE1823"/>
+				<stop  offset="1" style="stop-color:#BE1823"/>
+			</linearGradient>
+			<path style="&st1;" d="M14.313,24.813c-5.79,0-10.5-4.709-10.5-10.5c0-5.79,4.71-10.5,10.5-10.5c5.789,0,10.5,4.71,10.5,10.5
+				C24.813,20.104,20.102,24.813,14.313,24.813z"/>
+			<path style="&st2;" d="M14.313,4.813c5.248,0,9.5,4.254,9.5,9.5c0,5.246-4.252,9.5-9.5,9.5c-5.247,0-9.5-4.254-9.5-9.5
+				C4.812,9.067,9.065,4.813,14.313,4.813 M14.313,2.813c-6.342,0-11.5,5.159-11.5,11.5c0,6.341,5.159,11.5,11.5,11.5
+				c6.34,0,11.5-5.156,11.5-11.5C25.813,7.971,20.652,2.813,14.313,2.813L14.313,2.813z"/>
+		</g>
+	</g>
+	<rect x="7.812" y="12.813" style="&st2;" width="13" height="3"/>
+</g>
+</svg>

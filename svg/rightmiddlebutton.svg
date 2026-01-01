@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY st0 "fill:#4E6380;">
+	<!ENTITY st1 "fill:url(#SVGID_1_);">
+	<!ENTITY st2 "fill:#9CACBF;">
+]>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="38.032px" height="27.532px" viewBox="0 0 38.032 27.532" style="enable-background:new 0 0 38.032 27.532;"
+	 xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<path style="&st2;" d="M0.54,27.022l-0.002-0.498C0.53,24.225,0.533,14.961,0.536,8.193l0.002-6.671h32.5
+				c2.481,0,4.5,2.051,4.5,4.571v16.357c0,2.521-2.019,4.571-4.5,4.571H0.54z"/>
+			<path style="&st2;" d="M33.038,2.022c2.209,0,4,1.822,4,4.071v16.357c0,2.249-1.791,4.071-4,4.071h-32
+				c-0.012-3.184,0-19.733,0-24.5H33.038 M33.038,1.022h-32h-1v1l-0.002,6.17C0.033,14.958,0.03,24.225,0.038,26.526l0.004,0.996
+				h0.996h32c2.757,0,5-2.275,5-5.071V6.093C38.038,3.297,35.795,1.022,33.038,1.022L33.038,1.022z"/>
+		</g>
+		<g>
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="19.0356" y1="0.522" x2="19.0356" y2="26.0225">
+				<stop  offset="0" style="stop-color:#ABB9CA"/>
+				<stop  offset="0.522" style="stop-color:#899BB3"/>
+				<stop  offset="0.522" style="stop-color:#788CA8"/>
+				<stop  offset="1" style="stop-color:#798EAA"/>
+			</linearGradient>
+			<path style="&st1;" d="M0.54,26.022l-0.002-0.498C0.53,23.225,0.533,13.961,0.536,7.193l0.002-6.671h32.5
+				c2.481,0,4.5,2.051,4.5,4.571v16.357c0,2.521-2.019,4.571-4.5,4.571H0.54z"/>
+			<path style="&st0;" d="M33.038,1.022c2.209,0,4,1.822,4,4.071v16.357c0,2.249-1.791,4.071-4,4.071h-32
+				c-0.012-3.184,0-19.733,0-24.5H33.038 M33.038,0.022h-32h-1v1l-0.002,6.17C0.033,13.958,0.03,23.225,0.038,25.526l0.004,0.996
+				h0.996h32c2.757,0,5-2.275,5-5.071V5.093C38.038,2.297,35.795,0.022,33.038,0.022L33.038,0.022z"/>
+		</g>
+	</g>
+	<line style="&st0;" x1="38.032" y1="1.022" x2="38.032" y2="25.522"/>
+</g>
+</svg>
