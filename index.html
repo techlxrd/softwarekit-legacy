@@ -49,7 +49,7 @@
        
         .tab-page { display: none; }
         .tab-page.visible { display: block; }
-
+       .home-icon{width:90px;height:90px;border-radius:23.3px;}
     </style>
 </head>
 
@@ -60,8 +60,13 @@
 </header>
 
 <div id="main-container">
-
-    <section id="view-apps" class="tab-page visible">
+    <section id="view-home" class="tab-page visible">
+        <div id="content">
+           <center><img src="https://softwarekit.pages.dev/favicon.png" class="home-icon"></img><br>Welcome to SoftwareKit Legacy</center>
+       
+        </div>
+    </section>
+    <section id="view-apps" class="tab-page">
         <div id="content">
             <section>
              <nav data-image-type="thumbnail">
@@ -76,18 +81,80 @@
                 
             </a>
             
-        </nav>
-            </nav>
+        </nav>          
         </div>
     </section>
 
     <section id="view-repos" class="tab-page">
         <div id="content">
-            <header><h2>Jailbreak Repositories</h2></header>
-            <nav data-image-type="none">
-                <a href="#"><p>BigBoss Repo</p></a>
-                <a href="#"><p>ModMyi</p></a>
-            </nav>
+            <section>
+            <nav data-image-type="thumbnail">
+            <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://7bubbl3s.github.io">
+                <img src="https://softwarekit.pages.dev/favicon.png" alt="icon"><small>https://7bubbl3s.github.io</small>
+                <p>7bubbl3s Repo</p>
+                
+            </a>
+             <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.skyglow.es">
+                <img src="images/skyglow.png" alt="icon"><small>https://cydia.skyglow.es</small>
+                <p>SkyGlow Cydia Repo</p>              
+            </a>
+                      <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://aoiblog.jp">
+                <img src="https://softwarekit.pages.dev/favicon.png" alt="icon"><small>https://aoiblog.jp</small>
+                <p>satou_aoi Cydia Repo</p>
+                
+            </a>
+                       <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://pwnage.dev">
+                <img src="https://softwarekit.pages.dev/favicon.png" alt="icon"><small>https://pwnage.dev</small>
+                <p>Pwnage Archive</p>
+                
+            </a> 
+                       <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.nekokawa.net">
+                <img src="https://softwarekit.pages.dev/favicon.png" alt="icon"><small>https://cydia.nekokawa.net</small>
+                <p>nekokawa Cydia Repo</p>
+                
+            </a>
+                       <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://7bubbl3s.github.io">
+                <img src="https://softwarekit.pages.dev/favicon.png" alt="icon"><small>https://7bubbl3s.github.io</small>
+                <p>ModMyi (Archive)</p>
+                
+            </a>
+                       <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://lukezgd.github.io/repo">
+                <img src="https://softwarekit.pages.dev/favicon.png" alt="icon"><small>https://lukezgd.github.io/repo</small>
+                <p>LukeZGD's Repo</p>
+                
+            </a>
+                       <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://albyvar.github.io/legacyrepo">
+                <img src="https://softwarekit.pages.dev/favicon.png" alt="icon"><small>https://albyvar.github.io/legacyrepo</small>
+                <p>Legacy iOS Repo</p>
+                
+            </a>
+                       <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.invoxiplaygames.uk">
+                <img src="https://cydia.invoxiplaygames.uk/CydiaIcon.png" alt="icon"><small>https://cydia.invoxiplaygames.uk</small>
+                <p>IPG's Cydia Repo</p>
+                
+            </a>
+                                  <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.invoxiplaygames.uk/beta">
+                <img src="https://cydia.invoxiplaygames.uk/CydiaIcon.png" alt="icon"><small>https://cydia.invoxiplaygames.uk/beta</small>
+                <p>IPG's Beta Cydia Repo</p>
+                
+            </a>
+                                  <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://yzu.moe/dev">
+                <img src="https://yzu.moe/dev/CydiaIcon2.png" alt="icon"><small>https://yzu.moe/dev</small>
+                <p>Electimon's Repo</p>
+                
+            </a>
+                                  <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://repo.bibitech.cc">
+                <img src="https://cydia.invoxiplaygames.uk/CydiaIcon.png" alt="icon"><small>https:// repo.bibitech.cc             
+                </small>
+                <p>BibiTech</p>
+                
+            </a>
+                                  <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.bag-xml.com">
+                <img src="https://cydia.bag-xml.com/assets/ico/apple-touch-icon-144-precomposed.png" alt="icon"><small>https://cydia.bag-xml.com</small>
+                <p>bag.xml's repo</p>
+                
+            </a>
+        </nav>
         </div>
     </section>
 
@@ -105,7 +172,11 @@
 </div>
 
 <footer id="tabbar-fixed">
-    <a href="#view-apps" class="tab-btn active" data-name="Apps & Utilities">
+    <a href="#view-home" class="tab-btn active" data-name="Home">
+        <img src="svg/location.svg" />
+        <span>Home</span>
+    </a>
+    <a href="#view-apps" class="tab-btn" data-name="Apps & Utilities">
         <img src="svg/plus.svg" />
         <span>Apps & Utils</span>
     </a>
@@ -124,17 +195,14 @@ $(function() {
     $('.tab-btn').on('tap click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-
-        // 1. Change tab appearance
+        
         $('.tab-btn').removeClass('active');
         $(this).addClass('active');
 
-        // 2. Switch the view
         var targetPage = $(this).attr('href');
         $('.tab-page').removeClass('visible');
         $(targetPage).addClass('visible');
-
-        // 3. Update the Header Text
+      
         var title = $(this).attr('data-name');
         $('#nav-title').text(title);
 
