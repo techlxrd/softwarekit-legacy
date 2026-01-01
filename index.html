@@ -9,18 +9,16 @@
     <script src="javascript/iwebkit.js"></script>
     <title>SoftwareKit Legacy</title>
 
-    <style>
-        /* 1. PREVENT BLINKING & FIX LAYOUT */
+    <style>      
         body {
             margin: 0;
             padding: 0;
-            padding-bottom: 50px; /* Space for the tab bar */
+            padding-bottom: 50px; 
             -webkit-user-select: none;
             -webkit-text-size-adjust: none;
-            -webkit-tap-highlight-color: rgba(0,0,0,0); /* Removes the gray flash on tap */
+            -webkit-tap-highlight-color: rgba(0,0,0,0); 
         }
-
-        /* 2. THE STABLE TOOLBAR */
+     
         #tabbar-fixed {
             position: fixed;
             bottom: 0;
@@ -31,8 +29,7 @@
             background: -webkit-gradient(linear, left top, left bottom, from(#454545), color-stop(0.5, #111111), to(#000000));
             border-top: 1px solid #000;
             display: -webkit-box;
-            -webkit-box-orient: horizontal;
-            /* Force Hardware Acceleration to prevent flickering */
+            -webkit-box-orient: horizontal;          
             -webkit-transform: translate3d(0,0,0);
         }
 
@@ -54,13 +51,11 @@
             pointer-events: none; /* Prevents image from blocking the tap */
         }
 
-        /* 3. PERSISTENT ACTIVE STATE */
         .tab-btn.active {
             color: #ffffff !important;
             background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 118, 245, 0.6)), to(rgba(0,0,0,0))) !important;
         }
-
-        /* 4. CONTENT SECTIONS */
+      
         .tab-page {
             display: none;
             -webkit-overflow-scrolling: touch;
@@ -74,35 +69,35 @@
 <body>
 
 <header>
-    <h1 id="nav-title">Apps</h1>
+    <h1 id="nav-title">Apps & Utilities</h1>
 </header>
 
 <div id="main-container">
 
     <section id="view-apps" class="tab-page visible">
         <section id="content">
-            <header><h2>Network Utilities</h2></header>
+            <header><h2>SoftwareKit Legacy</h2></header>
             <nav data-image-type="icon">
-                <a href="#"><img src="images/icon.png" alt=""><p>Wi-Fi</p></a>
+                <a href="#"><img src="images/icon.png" alt=""><p>iOS 6</p></a>
             </nav>
         </section>
     </section>
 
     <section id="view-utils" class="tab-page">
         <section id="content">
-            <header><h2>Utilities</h2></header>
+            <header><h2>Jailbreak Repos</h2></header>
             <nav data-image-type="none">
-                <a href="#"><p>Battery Info</p></a>
+                <a href="#"><p>Repo</p></a>
             </nav>
         </section>
     </section>
 
     <section id="view-settings" class="tab-page">
         <section id="content">
-            <header><h2>Settings</h2></header>
+            <header><h2>Settings & Information</h2></header>
             <form>
                 <fieldset data-input-type="checkbox">
-                    <input type="checkbox" checked><label>Legacy Mode</label>
+                    <input type="checkbox" checked><label>Info</label>
                 </fieldset>
             </form>
         </section>
@@ -111,41 +106,36 @@
 </div>
 
 <footer id="tabbar-fixed">
-    <a href="#view-apps" class="tab-btn active" data-name="Apps">
+    <a href="#view-apps" class="tab-btn active" data-name="Apps & Utilities">
         <img src="svg/plus.svg" />
-        <span>Apps</span>
+        <span>Apps & Utilities</span>
     </a>
-    <a href="#view-utils" class="tab-btn" data-name="Utilities">
+    <a href="#view-utils" class="tab-btn" data-name="Jailbreak Repositories">
         <img src="svg/bookmark.svg" />
-        <span>Utils</span>
+        <span>JB Repos</span>
     </a>
-    <a href="#view-settings" class="tab-btn" data-name="Settings">
+    <a href="#view-settings" class="tab-btn" data-name="Settings & Info">
         <img src="svg/tabs.svg" />
-        <span>Settings</span>
+        <span>Settings & Info</span>
     </a>
 </footer>
 
 <script>
 $(function() {
-    // USE 'ON' WITH STOP PROPAGATION TO PREVENT IWEBKIT INTERFERENCE
     $('.tab-btn').on('tap click', function(e) {
         e.preventDefault();
-        e.stopPropagation(); // Stops iwebkit.js from trying to "load" the link
-
-        // Update Buttons
+        e.stopPropagation();        
         $('.tab-btn').removeClass('active');
         $(this).addClass('active');
 
-        // Update Pages
+      
         var targetPage = $(this).attr('href');
         $('.tab-page').removeClass('visible');
         $(targetPage).addClass('visible');
-
-        // Update Title
+      
         var title = $(this).attr('data-name');
         $('#nav-title').text(title);
-
-        // Prevent page jump
+      
         window.scrollTo(0,0);
         return false;
     });
