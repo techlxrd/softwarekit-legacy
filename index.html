@@ -8,28 +8,17 @@
     <script src="javascript/zepto.min.js"></script>
     <script src="javascript/iwebkit.js"></script>
     <title>SoftwareKit Legacy</title>
-
-    <style>      
-        body {
-            margin: 0;
-            padding: 0;
-            padding-bottom: 50px; 
-            -webkit-user-select: none;
-            -webkit-text-size-adjust: none;
-            -webkit-tap-highlight-color: rgba(0,0,0,0); 
-        }
-     
+    
+    <style>
+        /* THE "BLUE THING" (Tab Bar Selection Glow) */
         #tabbar-fixed {
             position: fixed;
-            bottom: 0;
-            left: 0;
-            z-index: 9999;
-            width: 100%;
-            height: 49px;
+            bottom: 0; left: 0; z-index: 9999;
+            width: 100%; height: 49px;
             background: -webkit-gradient(linear, left top, left bottom, from(#454545), color-stop(0.5, #111111), to(#000000));
             border-top: 1px solid #000;
             display: -webkit-box;
-            -webkit-box-orient: horizontal;          
+            -webkit-box-orient: horizontal;
             -webkit-transform: translate3d(0,0,0);
         }
 
@@ -38,35 +27,41 @@
             display: block;
             text-align: center;
             text-decoration: none;
-            color: #999;
+            color: #9c9c9c;
             font-size: 10px;
             font-weight: bold;
             padding-top: 6px;
+        }
+
+        /* The Blue Selection Gradient */
+        .tab-btn.active {
+            color: #ffffff !important;
+            background: -webkit-gradient(linear, left top, left bottom, from(#0276f5), to(#01499a));
+            -webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+        }
+
+        /* Icon Glow Effect */
+        .tab-btn.active img {
+            -webkit-filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.8));
         }
 
         .tab-btn img {
             height: 24px;
             display: block;
             margin: 0 auto 1px auto;
-            pointer-events: none; /* Prevents image from blocking the tap */
+            pointer-events: none;
         }
 
-        .tab-btn.active {
-            color: #ffffff !important;
-            background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 118, 245, 0.6)), to(rgba(0,0,0,0))) !important;
-        }
-      
-        .tab-page {
-            display: none;
-            -webkit-overflow-scrolling: touch;
-        }
-        .tab-page.visible {
-            display: block;
-        }
+       
+        .tab-page { display: none; }
+        .tab-page.visible { display: block; }
+
+        /* iWebKit 6 fix: Ensure #content doesn't double-margin */
+        #content { padding-bottom: 10px !important; }
     </style>
 </head>
 
-<body>
+<body data-ui-type="native">
 
 <header>
     <h1 id="nav-title">Apps & Utilities</h1>
@@ -75,32 +70,60 @@
 <div id="main-container">
 
     <section id="view-apps" class="tab-page visible">
-        <section id="content">
-            <header><h2>SoftwareKit Legacy</h2></header>
+        <div id="content">
+            <header><h2>Network Test</h2></header>
+            
+            <section>
+                <article>
+                    <header><h3>Introduction:</h3></header>
+                    <p>Now the framework styles will apply correctly because this is inside the #content div.</p>
+                </article>
+            </section>
+
+            <aside>
+                <p>Extra Info: Volume buttons adjust alerts.</p>
+            </aside>
+
             <nav data-image-type="icon">
-                <a href="#"><img src="images/icon.png" alt=""><p>iOS 6</p></a>
+                <a href="#">
+                    <img src="images/icon.png" alt="icon">
+                    <p>Wi-Fi</p>
+                    <small>SFR WiFi Public</small>
+                </a>
+                <a href="#">
+                    <img src="images/icon.png" alt="icon">
+                    <p>Gamecenter</p>
+                </a>
             </nav>
-        </section>
+
+            <nav data-image-type="none">
+                <a href="#"><p>Other options</p></a>
+            </nav>
+        </div>
     </section>
 
-    <section id="view-utils" class="tab-page">
-        <section id="content">
-            <header><h2>Jailbreak Repos</h2></header>
+    <section id="view-repos" class="tab-page">
+        <div id="content">
+            <header><h2>Jailbreak Repositories</h2></header>
             <nav data-image-type="none">
-                <a href="#"><p>Repo</p></a>
+                <a href="#"><p>BigBoss Repo</p></a>
+                <a href="#"><p>ModMyi</p></a>
             </nav>
-        </section>
+        </div>
     </section>
 
     <section id="view-settings" class="tab-page">
-        <section id="content">
+        <div id="content">
             <header><h2>Settings & Information</h2></header>
             <form>
                 <fieldset data-input-type="checkbox">
-                    <input type="checkbox" checked><label>Info</label>
+                    <input type="checkbox" checked><label>Enable Legacy Mode</label>
                 </fieldset>
             </form>
-        </section>
+            <footer class="bar bottom">
+                <address>Powered by iWebKit 6</address>
+            </footer>
+        </div>
     </section>
 
 </div>
@@ -108,15 +131,15 @@
 <footer id="tabbar-fixed">
     <a href="#view-apps" class="tab-btn active" data-name="Apps & Utilities">
         <img src="svg/plus.svg" />
-        <span>Apps & Utilities</span>
+        <span>Apps & Utils</span>
     </a>
-    <a href="#view-utils" class="tab-btn" data-name="Jailbreak Repositories">
+    <a href="#view-repos" class="tab-btn" data-name="JB Repositories">
         <img src="svg/bookmark.svg" />
         <span>JB Repos</span>
     </a>
     <a href="#view-settings" class="tab-btn" data-name="Settings & Info">
         <img src="svg/tabs.svg" />
-        <span>Settings & Info</span>
+        <span>Settings</span>
     </a>
 </footer>
 
@@ -124,18 +147,21 @@
 $(function() {
     $('.tab-btn').on('tap click', function(e) {
         e.preventDefault();
-        e.stopPropagation();        
+        e.stopPropagation();
+
+        // 1. Change tab appearance
         $('.tab-btn').removeClass('active');
         $(this).addClass('active');
 
-      
+        // 2. Switch the view
         var targetPage = $(this).attr('href');
         $('.tab-page').removeClass('visible');
         $(targetPage).addClass('visible');
-      
+
+        // 3. Update the Header Text
         var title = $(this).attr('data-name');
         $('#nav-title').text(title);
-      
+
         window.scrollTo(0,0);
         return false;
     });
