@@ -2,20 +2,7 @@
 
 var type;
 var orientation=window.orientation;
-
-function ios4fix() {
-		if($.os.version < "5"){
-		if($.os.ipad){$('body > #content').css('margin-top','44px').css('height','auto');};
-		if($.os.iphone){if(orientation == '90' || orientation == '-90'){$('body > #content').css('margin-top','32px').css('height','auto')};
-		if(orientation == '0' || orientation == '180'){$('body > #content').css('margin-top','44px').css('height','auto')}};	
-		var contentheight = $('#content').height();
-		var ipadmenuheight = $('#ipadmenu').height();
-		if($.os.ipad && ipadmenuheight < contentheight){$('#ipadmenu').css('height', contentheight + 'px');$('body > footer').css('position','absolute').css('top',(contentheight + 44) + 'px');};
-		if($.os.ipad && ipadmenuheight > contentheight){$('#content').css('height', ipadmenuheight + 'px');$('body > footer').css('position','absolute').css('top',(ipadmenuheight + 44) + 'px');};
-		if($.os.iphone){$('body > footer').css('position','static');};
-		}
-		};
-		//Tabbar
+//Tabbar
 	$(function() {
     $('.tab-btn').on('tap click', function(e) {
         e.preventDefault();
@@ -35,6 +22,19 @@ function ios4fix() {
         return false;
     });
 });	
+function ios4fix() {
+		if($.os.version < "5"){
+		if($.os.ipad){$('body > #content').css('margin-top','44px').css('height','auto');};
+		if($.os.iphone){if(orientation == '90' || orientation == '-90'){$('body > #content').css('margin-top','32px').css('height','auto')};
+		if(orientation == '0' || orientation == '180'){$('body > #content').css('margin-top','44px').css('height','auto')}};	
+		var contentheight = $('#content').height();
+		var ipadmenuheight = $('#ipadmenu').height();
+		if($.os.ipad && ipadmenuheight < contentheight){$('#ipadmenu').css('height', contentheight + 'px');$('body > footer').css('position','absolute').css('top',(contentheight + 44) + 'px');};
+		if($.os.ipad && ipadmenuheight > contentheight){$('#content').css('height', ipadmenuheight + 'px');$('body > footer').css('position','absolute').css('top',(ipadmenuheight + 44) + 'px');};
+		if($.os.iphone){$('body > footer').css('position','static');};
+		}
+		};
+		
 function ipadmenuslide(direction,direction2,nextmenu,currentmenu){$("[data-order='" + nextmenu + "']").css("-webkit-transform", "translate("+direction+"300px,0)").css('display','block');
 setTimeout(function () {
 $("[data-order='" + nextmenu + "']").css("-webkit-transition-duration", "0.4s").css("-webkit-transform", "translate(0,0)");
