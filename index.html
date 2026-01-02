@@ -16,5 +16,10 @@
         
         return false;
     });
-});    
+});
+document.addEventListener('touchmove', function (e) {    
+    if (e.target.tagName === 'BODY' || e.target.tagName === 'HTML') {
+        e.preventDefault();
+    }
+}, { passive: false });    
 </script></html>
