@@ -1,4 +1,4 @@
-﻿/*iWebKit 6 css by Christopher Plieger*/
+﻿/*iWebKit 6 Reborn css by TechLxrd*/
 
 /*TOPBAR*/
 
@@ -10,13 +10,13 @@ body>footer{background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2d3033), 
 body>header{top:0}
 body>footer{bottom:0}
 body>header>nav>a{color:white}
-body> header > nav > a.leftnav[data-nav-type=arrow]{-webkit-border-image: url("../svg/navigation/leftnative.svgz") 0 4 0 13; border-width:0 5px 0 14px;padding-right:4px;background:url('../svg/navigation/leftnativetouch.svgz') center center no-repeat ; background-size:1px 1px}
-body> header > nav > a.rightnav[data-nav-type=arrow]{-webkit-border-image: url("../svg/navigation/rightnative.svgz") 0 13 0 4; border-width:0 14px 0 5px;padding-left:4px;background:url('../svg/navigation/rightnativetouch.svgz') center center no-repeat; background-size:1px 1px}
-body> header > nav > a.leftnav[data-nav-type=arrow].click{-webkit-border-image: url("../svg/navigation/leftnativetouch.svgz") 0 4 0 13}
-body> header > nav > a.rightnav[data-nav-type=arrow].click{-webkit-border-image: url("../svg/navigation/rightnativetouch.svgz") 0 13 0 4}
-body> header > nav > a[data-nav-type=button]{-webkit-border-image: url("../svg/navigation/nativebutton.svgz") 0 4 0 4; border-width:0 4px 0 4px;padding:0 5px 0 5px; background:url('../svg/navigation/nativebuttontouch.svgz') center center no-repeat; background-size:1px 1px}
-body> header > nav > a[data-nav-type=button][data-color=blue]{-webkit-border-image: url("../svg/navigation/bluebutton.svgz") 0 4 0 4; border-width:0 5px 0 5px;padding:0 5px 0 5px}
-body> header > nav > a[data-nav-type=button].click{-webkit-border-image: url("../svg/navigation/nativebuttontouch.svgz") 0 4 0 4}
+body> header > nav > a.leftnav[data-nav-type=arrow]{-webkit-border-image: url("../svg/leftnative.svg") 0 4 0 13; border-width:0 5px 0 14px;padding-right:4px;background:url('../svg/leftnativetouch.svg') center center no-repeat ; background-size:1px 1px}
+body> header > nav > a.rightnav[data-nav-type=arrow]{-webkit-border-image: url("../svg/rightnative.svg") 0 13 0 4; border-width:0 14px 0 5px;padding-left:4px;background:url('../svg/rightnativetouch.svg') center center no-repeat; background-size:1px 1px}
+body> header > nav > a.leftnav[data-nav-type=arrow].click{-webkit-border-image: url("../svg/leftnativetouch.svg") 0 4 0 13}
+body> header > nav > a.rightnav[data-nav-type=arrow].click{-webkit-border-image: url("../svg/rightnativetouch.svg") 0 13 0 4}
+body> header > nav > a[data-nav-type=button]{-webkit-border-image: url("../svg/nativebutton.svg") 0 4 0 4; border-width:0 4px 0 4px;padding:0 5px 0 5px; background:url('../svg/nativebuttontouch.svg') center center no-repeat; background-size:1px 1px}
+body> header > nav > a[data-nav-type=button][data-color=blue]{-webkit-border-image: url("../svg/bluebutton.svg") 0 4 0 4; border-width:0 5px 0 5px;padding:0 5px 0 5px}
+body> header > nav > a[data-nav-type=button].click{-webkit-border-image: url("../svg/nativebuttontouch.svg") 0 4 0 4}
 body>header>h1 {color:white}
 
 @media screen and (width: 480px)
@@ -60,27 +60,27 @@ body #content>aside a{color: #009;text-shadow: #FFF 0 1px 0;text-decoration:none
 body #content section{background:white; border:1px solid #ababab;}
 body #content section h3 {color: rgb(73,102,145)}
 body #content section>nav>a{color:black}
-body #content section>nav a{background: url('../svg/elements.svgz') 229px -110px no-repeat}body #content section>nav[data-image-type=thumbnail] a{background: url('../svg/elements.svgz') 229px -104px no-repeat}
-body #content section>nav[data-image-type=image] a{background: url('../svg/elements.svgz') 229px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
-body #content section>nav a.click{background:url('../svg/elements.svgz') 283px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-body #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svgz') 283px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-body #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svgz') 283px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
+body #content section>nav a{background: url('../svg/elements.svg') 229px -110px no-repeat}body #content section>nav[data-image-type=thumbnail] a{background: url('../svg/elements.svg') 229px -104px no-repeat}
+body #content section>nav[data-image-type=image] a{background: url('../svg/elements.svg') 229px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
+body #content section>nav a.click{background:url('../svg/elements.svg') 283px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+body #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svg') 283px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+body #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svg') 283px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
 body #content section>nav[data-image-type=icon]>a>small{color: #324f85}
 body #content section>nav>a.click p, body #content section>nav[data-image-type=icon]>a.click small,body #content section>nav[data-image-type=thumbnail]>a.click>small,body #content section>nav[data-image-type=image]>a.click>div,body #content section>nav[data-image-type=image]>a.click>small{color:white}
 body #content section>nav[data-image-type=thumbnail]>a>small,body #content section>nav[data-image-type=image]>a>small,body #content section>nav[data-image-type=image]>a>div{color:#808080}
-body #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svgz') 280px -300px no-repeat}
+body #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svg') 280px -300px no-repeat}
 body #content fieldset[data-input-type=button]>input{background:white}
 body #content fieldset[data-input-type=radiobutton]>input:checked+label{color:#335086}
 /*Bottom tabbar*/
-.tab-btn,.tab-btn img,.tab-page.visible{display:block}#tabbar-fixed{position:fixed;bottom:0;left:0;z-index:9999;width:100%;height:49px;background:-webkit-gradient(linear,left top,left bottom,from(#454545),color-stop(.5,#111),to(#000));border-top:1px solid #000;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-transform:translate3d(0,0,0)}.tab-btn{-webkit-box-flex:1;text-align:center;text-decoration:none;color:#9c9c9c;font-size:10px;font-weight:700;padding-top:6px}.tab-btn.active{color:#fff!important;background:-webkit-gradient(linear,left top,left bottom,from(#0276f5),to(#01499a));-webkit-box-shadow:inset 0 0 10px rgba(0,0,0,.5)}.tab-btn.active img{-webkit-filter:drop-shadow(0px 0px 5px rgba(255,255,255,0.8))}.tab-btn img{height:24px;margin:0 auto 1px;pointer-events:none}.tab-page{display:none}
+.tab-btn,.tab-btn img,.tab-page.visible{display:block}#tabbar-fixed{position:fixed;bottom:0;left:0;z-index:9999;width:100%;height:49px;background:-webkit-gradient(linear,left top,left bottom,from(#454545),color-stop(.5,#111),to(#000));border-top:1px solid #000;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-transform:translate3d(0,0,0)}.tab-btn{-webkit-box-flex:1;text-align:center;text-decoration:none;color:#9c9c9c;font-size:10px;font-weight:700;padding-top:6px}.tab-btn.active{color:#fff!important;background:-webkit-gradient(linear,left top,left bottom,from(#0276f5),to(#01499a));-webkit-box-shadow:inset 0 0 10px rgba(0,0,0,.5);border-radius:8px;}.tab-btn.active img{-webkit-filter:drop-shadow(0px 0px 5px rgba(255,255,255,0.8))}.tab-btn img{height:24px;margin:0 auto 1px;pointer-events:none}.tab-page{display:none}
 @media screen and (width: 480px)
 {body #content{margin-top:32px;height:268px;width:480px}
 body #content section>nav a{background-position:389px -110px}body #content section>nav[data-image-type=thumbnail] a{background-position:389px -104px}
-body #content section>nav[data-image-type=image] a{background: url('../svg/elements.svgz') 389px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
-body #content section>nav a.click{background:url('../svg/elements.svgz') 443px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-body #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svgz') 443px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-body #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svgz') 443px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
-body #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svgz') 440px -300px no-repeat}
+body #content section>nav[data-image-type=image] a{background: url('../svg/elements.svg') 389px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
+body #content section>nav a.click{background:url('../svg/elements.svg') 443px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+body #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svg') 443px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+body #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svg') 443px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
+body #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svg') 440px -300px no-repeat}
 }
 
 /* content settings*/
@@ -132,11 +132,11 @@ body #content fieldset[data-input-type=radiobutton]>label+input:before{content:"
 body #content section>nav[data-image-type=image] small{position:absolute;left:95px; top:15px;font-weight:bold;max-width:188px;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;font-size:12px}
 body #content section>nav[data-image-type=image] div{position:absolute;left:94px; top:57px;height:22px;display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;min-width:115px;font-size:12px}
 body #content section>nav[data-image-type=image] div[data-stars=zero]:before{content:"No reviews"; padding-right:10000px}
-body #content section>nav[data-image-type=image] div[data-stars=one]{width:59px;background: url('../svg/elements.svgz') -59px -218px, url('../svg/elements.svgz') 14px -280px, url('../svg/elements.svgz') 28px -280px, url('../svg/elements.svgz') 42px -280px no-repeat, url('../svg/elements.svgz') 56px -280px; background-size: 214% auto;background-repeat:no-repeat}
-body #content section>nav[data-image-type=image] div[data-stars=two]{width:59px;background: url('../svg/elements.svgz') -59px -218px, url('../svg/elements.svgz') -45px -218px, url('../svg/elements.svgz') 28px -280px, url('../svg/elements.svgz') 42px -280px no-repeat, url('../svg/elements.svgz') 56px -280px; background-size: 214% auto;background-repeat:no-repeat}
-body #content section>nav[data-image-type=image] div[data-stars=three]{width:59px;background: url('../svg/elements.svgz') -59px -218px, url('../svg/elements.svgz') -45px -218px, url('../svg/elements.svgz') -31px -218px, url('../svg/elements.svgz') 42px -280px no-repeat, url('../svg/elements.svgz') 56px -280px; background-size: 214% auto;background-repeat:no-repeat}
-body #content section>nav[data-image-type=image] div[data-stars=four]{width:59px;background: url('../svg/elements.svgz') -59px -218px, url('../svg/elements.svgz') -45px -218px, url('../svg/elements.svgz') -31px -218px, url('../svg/elements.svgz') -17px -218px, url('../svg/elements.svgz') 56px -280px; background-size: 214% auto;background-repeat:no-repeat}
-body #content section>nav[data-image-type=image] div[data-stars=five]{width:59px;background: url('../svg/elements.svgz') -59px -218px, url('../svg/elements.svgz') -45px -218px, url('../svg/elements.svgz') -31px -218px, url('../svg/elements.svgz') -17px -218px, url('../svg/elements.svgz') -3px -218px; background-size: 214% auto;background-repeat:no-repeat}
+body #content section>nav[data-image-type=image] div[data-stars=one]{width:59px;background: url('../svg/elements.svg') -59px -218px, url('../svg/elements.svg') 14px -280px, url('../svg/elements.svg') 28px -280px, url('../svg/elements.svg') 42px -280px no-repeat, url('../svg/elements.svg') 56px -280px; background-size: 214% auto;background-repeat:no-repeat}
+body #content section>nav[data-image-type=image] div[data-stars=two]{width:59px;background: url('../svg/elements.svg') -59px -218px, url('../svg/elements.svg') -45px -218px, url('../svg/elements.svg') 28px -280px, url('../svg/elements.svg') 42px -280px no-repeat, url('../svg/elements.svg') 56px -280px; background-size: 214% auto;background-repeat:no-repeat}
+body #content section>nav[data-image-type=image] div[data-stars=three]{width:59px;background: url('../svg/elements.svg') -59px -218px, url('../svg/elements.svg') -45px -218px, url('../svg/elements.svg') -31px -218px, url('../svg/elements.svg') 42px -280px no-repeat, url('../svg/elements.svg') 56px -280px; background-size: 214% auto;background-repeat:no-repeat}
+body #content section>nav[data-image-type=image] div[data-stars=four]{width:59px;background: url('../svg/elements.svg') -59px -218px, url('../svg/elements.svg') -45px -218px, url('../svg/elements.svg') -31px -218px, url('../svg/elements.svg') -17px -218px, url('../svg/elements.svg') 56px -280px; background-size: 214% auto;background-repeat:no-repeat}
+body #content section>nav[data-image-type=image] div[data-stars=five]{width:59px;background: url('../svg/elements.svg') -59px -218px, url('../svg/elements.svg') -45px -218px, url('../svg/elements.svg') -31px -218px, url('../svg/elements.svg') -17px -218px, url('../svg/elements.svg') -3px -218px; background-size: 214% auto;background-repeat:no-repeat}
 body #content section>nav[data-image-type=image] div:not([data-stars=zero]){padding-left:70px}
 body #content section>nav[data-image-type=image] a:first-child img, body #content section>nav[data-image-type=thumbnail] a:first-child img{border-top-left-radius:7px}
 body #content section>nav[data-image-type=image] a:last-child img, body #content section>nav[data-image-type=thumbnail] a:last-child img{border-bottom-left-radius:7px}
@@ -145,16 +145,16 @@ body #content fieldset[data-input-type=field]>input{width:280px;margin-left:-10p
 body #content fieldset[data-input-type=labelfield]>input{width:175px;float:right;color:#385487;font-weight:normal;font-size:14px;height:43px;padding: 0 10px 0 0;-webkit-border-radius: 0;}
 body #content fieldset[data-input-type=labelfield]>label{overflow:hidden;text-overflow:ellipsis;max-width:100px;width:100px;display:block;white-space:nowrap;float:left}
 body #content fieldset{padding:0; margin:0;background:transparent;font-size:17px; font-weight:bold;line-height:43px;padding-left:10px;position:relative}
-body #content fieldset[data-input-type=checkbox] input{width: 76px;height: 27px;border: 0;float: right;margin: 8px 8px 0 0;background: url('../svg/elements.svgz') 76px -35px;-webkit-border-radius:16px}
-body #content fieldset[data-input-type=checkbox] input:checked{background: url('../svg/elements.svgz') 125px -35px}
+body #content fieldset[data-input-type=checkbox] input{width: 76px;height: 27px;border: 0;float: right;margin: 8px 8px 0 0;background: url('../svg/elements.svg') 76px -35px;-webkit-border-radius:16px}
+body #content fieldset[data-input-type=checkbox] input:checked{background: url('../svg/elements.svg') 125px -35px}
 
-body #content fieldset[data-input-type=checkbox] input[data-color=orange]{background: url('../svg/elements.svgz') 76px -1px}
-body #content fieldset[data-input-type=checkbox] input[data-color=orange]:checked{background: url('../svg/elements.svgz') 125px -1px}
+body #content fieldset[data-input-type=checkbox] input[data-color=orange]{background: url('../svg/elements.svg') 76px -1px}
+body #content fieldset[data-input-type=checkbox] input[data-color=orange]:checked{background: url('../svg/elements.svg') 125px -1px}
 body #content fieldset[data-input-type=checkbox]>label{white-space:nowrap;text-overflow:ellipsis; overflow:hidden;width:180px;display:inline-block}
 body #content fieldset[data-input-type=radiobutton]>input{width: 100%;	height: 100%;z-index: 2;position: absolute;left: 0;margin: 0;-webkit-border-radius: 0;}
 body #content fieldset[data-input-type=radiobutton]>label{width:100%;height:100%;display:block;margin-left:-10px;padding-left:10px}
-body #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svgz') 225px 14px no-repeat}
-body #content fieldset[data-input-type=radiobutton]>input:checked.click{background: url('../svg/elements.svgz') 279px 14px no-repeat}
+body #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svg') 225px 14px no-repeat}
+body #content fieldset[data-input-type=radiobutton]>input:checked.click{background: url('../svg/elements.svg') 279px 14px no-repeat}
 body #content fieldset:last-child[data-input-type=button].click{-webkit-border-bottom-left-radius:7px;-webkit-border-bottom-right-radius:7px}
 body #content fieldset[data-input-type=button].click, body #content fieldset[data-input-type=button]>input.click,body #content fieldset[data-input-type=select]>select.click,body #content fieldset[data-input-type=select].click,body #content fieldset[data-input-type=radiobutton]>input.click +label{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6));color:white}
 body #content fieldset[data-input-type=radiobutton]>input:checked.click +label{color:white}
@@ -185,7 +185,7 @@ body #content fieldset[data-input-type=labelfield]>input{width:270px}
 body #content fieldset[data-input-type=labelfield]>label{max-width:170px;width:170px}
 body #content fieldset[data-input-type=checkbox]>label{width:340px}
 body #content fieldset[data-input-type=textarea]>textarea{width:438px}
-body #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svgz') 385px 14px no-repeat
+body #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svg') 385px 14px no-repeat
 }
 }
 /* Footer */
@@ -223,20 +223,20 @@ header,footer,#content,section,p,#ipadmenu,header>nav{-webkit-transform-style:pr
 	[data-ipadnav="left"]>h1{width:290px}
 	#ipadmenu~#content{position:absolute;right:0}
 	body{background:#e1e4e9}
-	body>header{background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), color-stop(2%, #ffffff), color-stop(3%, #f4f5f7), color-stop(50%, #dfe1e6), color-stop(97%, #a8acb9), color-stop(98%,#7a8091), to(#7a8091)), url(../svg/elements.svgz);}
+	body>header{background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), color-stop(2%, #ffffff), color-stop(3%, #f4f5f7), color-stop(50%, #dfe1e6), color-stop(97%, #a8acb9), color-stop(98%,#7a8091), to(#7a8091)), url(../svg/elements.svg);}
 	body>footer{background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7f7f7f), color-stop(2%, #7f7f7f),color-stop(3%, #edeef1), color-stop(50%, #d9dbe1), to(#a5a9b6));}
 	body>header h1{color:#717880;text-shadow:#e6e7eb 0 1px 0;}
 	body> header > nav > a{text-shadow:none}
-	body> header > nav > a.leftnav[data-nav-type=arrow]{-webkit-border-image: url("../svg/navigation/leftgray.svgz") 0 4 0 13;background:url('../svg/navigation/leftgraytouch.svgz') center center no-repeat}
-	body> header > nav > a.leftnav[data-nav-type=arrow].click{-webkit-border-image: url("../svg/navigation/leftgraytouch.svgz") 0 4 0 13}
-	body> header > nav > a.rightnav[data-nav-type=arrow].click{-webkit-border-image: url("../svg/navigation/rightgraytouch.svgz") 0 13 0 4}
-	body> header > nav > a.rightnav[data-nav-type=arrow]{-webkit-border-image: url("../svg/navigation/rightgray.svgz") 0 13 0 4;background:url('../svg/navigation/rightgraytouch.svgz') center center no-repeat}
-	body> header > nav > a[data-nav-type=button]{-webkit-border-image: url("../svg/navigation/graybutton.svgz") 0 4 0 4; background:url('../svg/navigation/graybuttontouch.svgz') center center no-repeat}
-	body> header > nav > a[data-nav-type=button].click{-webkit-border-image: url("../svg/navigation/graybuttontouch.svgz") 0 4 0 4}
-	body> header > nav > a[data-nav-type=button][data-color=blue]{background:url("../svg/navigation/nativebuttontouch.svgz") center center no-repeat;background-size:1px 1px;}
-	body> header > nav > a[data-nav-type=button][data-color=blue].click{-webkit-border-image: url("../svg/navigation/nativebuttontouch.svgz") 0 4 0 4}
+	body> header > nav > a.leftnav[data-nav-type=arrow]{-webkit-border-image: url("../svg/leftgray.svg") 0 4 0 13;background:url('../svg/leftgraytouch.svg') center center no-repeat}
+	body> header > nav > a.leftnav[data-nav-type=arrow].click{-webkit-border-image: url("../svg/leftgraytouch.svg") 0 4 0 13}
+	body> header > nav > a.rightnav[data-nav-type=arrow].click{-webkit-border-image: url("../svg/rightgraytouch.svg") 0 13 0 4}
+	body> header > nav > a.rightnav[data-nav-type=arrow]{-webkit-border-image: url("../svg/rightgray.svg") 0 13 0 4;background:url('../svg/rightgraytouch.svg') center center no-repeat}
+	body> header > nav > a[data-nav-type=button]{-webkit-border-image: url("../svg/graybutton.svg") 0 4 0 4; background:url('../svg/graybuttontouch.svg') center center no-repeat}
+	body> header > nav > a[data-nav-type=button].click{-webkit-border-image: url("../svg/graybuttontouch.svg") 0 4 0 4}
+	body> header > nav > a[data-nav-type=button][data-color=blue]{background:url("../svg/nativebuttontouch.svg") center center no-repeat;background-size:1px 1px;}
+	body> header > nav > a[data-nav-type=button][data-color=blue].click{-webkit-border-image: url("../svg/nativebuttontouch.svg") 0 4 0 4}
 	[data-ipadnav="right"]{position:absolute;left:305px;right:5px}
-	[data-ipadnav="left"]{position:absolute;left:5px;width:300px;height:44px;top:0;background:url(../svg/elements.svgz) -54px -68px}
+	[data-ipadnav="left"]{position:absolute;left:5px;width:300px;height:44px;top:0;background:url(../svg/elements.svg) -54px -68px}
 	[data-ipadnav="left"]>a{margin-top:7px;position:relative}
 	[data-ipadnav="left"]>.rightnav{margin-right:10px}
 	[data-ipadnav] ~ h1 {position:relative;left:300px}
@@ -251,11 +251,11 @@ body>header>h1 {width:1024px}
 [data-ipadnav] ~ h1{width:724px}
 body #content{width:1024px; height:704px;}
 body #content section>nav a{background-position:933px -110px}body #content section>nav[data-image-type=thumbnail] a{background-position:933px -104px}
-body #content section>nav[data-image-type=image] a{background: url('../svg/elements.svgz') 933px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
-body #content section>nav a.click{background:url('../svg/elements.svgz') 987px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-body #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svgz') 987px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-body #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svgz') 987px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
-body #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svgz') 984px -300px no-repeat}
+body #content section>nav[data-image-type=image] a{background: url('../svg/elements.svg') 933px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
+body #content section>nav a.click{background:url('../svg/elements.svg') 987px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+body #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svg') 987px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+body #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svg') 987px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
+body #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svg') 984px -300px no-repeat}
 
 body #content section,body #content>aside,fieldset[data-input-type=textarea],body #content fieldset[data-input-type=button]>input,body #content fieldset[data-input-type=select]>select,body #content fieldset[data-input-type=textarea]{width:1004px}
 body #content section>article,body #content fieldset[data-input-type=field]>input{width:984px}
@@ -273,7 +273,7 @@ body #content fieldset[data-input-type=labelfield]>label{max-width:714px;width:7
 
 body #content fieldset[data-input-type=checkbox]>label{width:884px}
 body #content fieldset[data-input-type=textarea]>textarea{width:976px}
-body #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svgz') 929px 14px no-repeat}
+body #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svg') 929px 14px no-repeat}
 /*hide elements*/
 [data-hide=ipad],[data-hide=landscape],[data-hide=ipad-landscape]{display:none}
 /*ipad menu*/
@@ -283,17 +283,17 @@ body #content fieldset[data-input-type=radiobutton]>input:checked{background: ur
 #ipadmenu.newcontent ~ #content.newcontent{width:723px;}
 #ipadmenu ~ #content section>nav a{background-position:632px -110px}
 #ipadmenu ~ #content section>nav[data-image-type=thumbnail] a{background-position:632px -104px}
-#ipadmenu ~ #content section>nav[data-image-type=image] a{background: url('../svg/elements.svgz') 632px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
+#ipadmenu ~ #content section>nav[data-image-type=image] a{background: url('../svg/elements.svg') 632px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
 #ipadmenu.oldcontent ~ #content.newcontent section>nav a{background-position:933px -110px}
 #ipadmenu.oldcontent ~ #content.newcontent section>nav[data-image-type=thumbnail] a{background-position:933px -104px}
-#ipadmenu.oldcontent ~ #content.newcontent section>nav[data-image-type=image] a{background: url('../svg/elements.svgz') 933px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
+#ipadmenu.oldcontent ~ #content.newcontent section>nav[data-image-type=image] a{background: url('../svg/elements.svg') 933px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
 #ipadmenu.newcontent ~ #content.newcontent section>nav a{background-position:632px -110px}
 #ipadmenu.newcontent ~ #content.newcontent section>nav[data-image-type=thumbnail] a{background-position:632px -104px}
-#ipadmenu.newcontent ~ #content.newcontent section>nav[data-image-type=image] a{background: url('../svg/elements.svgz') 632px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
-#ipadmenu ~ #content section>nav a.click{background:url('../svg/elements.svgz') 686px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-#ipadmenu ~ #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svgz') 686px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-#ipadmenu ~ #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svgz') 686px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
-#ipadmenu ~ #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svgz') 683px -300px no-repeat}
+#ipadmenu.newcontent ~ #content.newcontent section>nav[data-image-type=image] a{background: url('../svg/elements.svg') 632px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
+#ipadmenu ~ #content section>nav a.click{background:url('../svg/elements.svg') 686px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+#ipadmenu ~ #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svg') 686px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+#ipadmenu ~ #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svg') 686px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
+#ipadmenu ~ #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svg') 683px -300px no-repeat}
 
 #ipadmenu ~ #content section,#ipadmenu ~ #content>aside,#ipadmenu ~ #content fieldset[data-input-type=textarea],#ipadmenu ~ #content fieldset[data-input-type=button]>input,#ipadmenu ~ #content fieldset[data-input-type=select]>select,#ipadmenu ~ #content fieldset[data-input-type=textarea]{width:703px}
 #ipadmenu.oldcontent ~ #content.newcontent section,#ipadmenu.oldcontent ~ #content.newcontent>aside,#ipadmenu.oldcontent ~ #content.newcontent fieldset[data-input-type=textarea],#ipadmenu.oldcontent ~ #content.newcontent fieldset[data-input-type=button]>input,#ipadmenu.oldcontent ~ #content.newcontent fieldset[data-input-type=select]>select,#ipadmenu.oldcontent ~ #content.newcontent fieldset[data-input-type=textarea]{width:1004px}
@@ -313,7 +313,7 @@ body #content fieldset[data-input-type=radiobutton]>input:checked{background: ur
 #ipadmenu ~ #content fieldset[data-input-type=labelfield]>label{max-width:299px;width:299px}
 #ipadmenu ~ #content fieldset[data-input-type=checkbox]>label{width:583px}
 #ipadmenu ~ #content fieldset[data-input-type=textarea]>textarea{width:675px}
-#ipadmenu ~ #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svgz') 628px 14px no-repeat}
+#ipadmenu ~ #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svg') 628px 14px no-repeat}
 [data-ipadnav="right"]{width:714px}
 }
 @media screen and (width: 768px)
@@ -323,11 +323,11 @@ body>header>h1 {width:768px}
 body #content{width:768px;height:960px}
 body #content section>nav a{background-position:677px -110px}
 body #content section>nav[data-image-type=thumbnail] a{background-position:677px -104px}
-body #content section>nav[data-image-type=image] a{background: url('../svg/elements.svgz') 677px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
-body #content section>nav a.click{background:url('../svg/elements.svgz') 731px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-body #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svgz') 731px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-body #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svgz') 731px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
-body #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svgz') 728px -300px no-repeat}
+body #content section>nav[data-image-type=image] a{background: url('../svg/elements.svg') 677px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
+body #content section>nav a.click{background:url('../svg/elements.svg') 731px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+body #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svg') 731px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+body #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svg') 731px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
+body #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svg') 728px -300px no-repeat}
 
 body #content section,body #content>aside,fieldset[data-input-type=textarea],body #content fieldset[data-input-type=button]>input,body #content fieldset[data-input-type=select]>select,body #content fieldset[data-input-type=textarea]{width:748px}
 body #content section>article,body #content fieldset[data-input-type=field]>input{width:728px}
@@ -342,7 +342,7 @@ body #content fieldset[data-input-type=labelfield]>input{width:407px}
 body #content fieldset[data-input-type=labelfield]>label{max-width:307px;width:307px}
 body #content fieldset[data-input-type=checkbox]>label{width:628px}
 body #content fieldset[data-input-type=textarea]>textarea{width:720px}
-body #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svgz') 673px 14px no-repeat}
+body #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svg') 673px 14px no-repeat}
 
 /*hide elements*/
 [data-hide=ipad],[data-hide=portrait],[data-hide=ipad-portrait]{display:none}
@@ -364,15 +364,15 @@ body #content fieldset[data-input-type=radiobutton]>input:checked{background: ur
 #ipadmenu ~ #content section>nav[data-image-type=thumbnail] a{background-position:376px -104px}
 #ipadmenu.oldcontent ~ #content.newcontent section>nav[data-image-type=thumbnail] a{background-position:677px -104px}
 #ipadmenu.newcontent ~ #content.newcontent section>nav[data-image-type=thumbnail] a{background-position:376px -104px}
-#ipadmenu ~ #content section>nav[data-image-type=image] a{background: url('../svg/elements.svgz') 376px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
-#ipadmenu.oldcontent ~ #content.newcontent section>nav[data-image-type=image] a{background: url('../svg/elements.svgz') 677px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
-#ipadmenu.newcontent ~ #content.newcontent section>nav[data-image-type=image] a{background: url('../svg/elements.svgz') 376px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
-#ipadmenu ~ #content section>nav a.click{background:url('../svg/elements.svgz') 430px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-#ipadmenu ~ #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svgz') 430px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
-#ipadmenu ~ #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svgz') 430px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
-#ipadmenu ~ #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svgz') 427px -300px no-repeat}
-#ipadmenu.oldcontent ~ #content.newcontent fieldset[data-input-type=select]>select{background: url('../svg/elements.svgz') 728px -300px no-repeat}
-#ipadmenu.newcontent ~ #content.newcontent fieldset[data-input-type=select]>select{background: url('../svg/elements.svgz') 427px -300px no-repeat}
+#ipadmenu ~ #content section>nav[data-image-type=image] a{background: url('../svg/elements.svg') 376px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
+#ipadmenu.oldcontent ~ #content.newcontent section>nav[data-image-type=image] a{background: url('../svg/elements.svg') 677px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
+#ipadmenu.newcontent ~ #content.newcontent section>nav[data-image-type=image] a{background: url('../svg/elements.svg') 376px -87px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat; background-size:auto auto, 88px 88px}
+#ipadmenu ~ #content section>nav a.click{background:url('../svg/elements.svg') 430px -110px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+#ipadmenu ~ #content section>nav[data-image-type=thumbnail] a.click{background:url('../svg/elements.svg') 430px -104px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6))}
+#ipadmenu ~ #content section>nav[data-image-type=image] a.click{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(239,242,246)), color-stop(1, rgb(214,220,229))) no-repeat, url('../svg/elements.svg') 430px -87px no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5), to(#015fe6)); background-size:88px 88px, auto auto, auto auto} 
+#ipadmenu ~ #content fieldset[data-input-type=select]>select{background: url('../svg/elements.svg') 427px -300px no-repeat}
+#ipadmenu.oldcontent ~ #content.newcontent fieldset[data-input-type=select]>select{background: url('../svg/elements.svg') 728px -300px no-repeat}
+#ipadmenu.newcontent ~ #content.newcontent fieldset[data-input-type=select]>select{background: url('../svg/elements.svg') 427px -300px no-repeat}
 
 #ipadmenu ~ #content section>nav[data-image-type=icon]>a>p{max-width:382px}
 #ipadmenu ~ #content section>nav[data-image-type=none]>a>p{max-width:422px}
@@ -385,7 +385,7 @@ body #content fieldset[data-input-type=radiobutton]>input:checked{background: ur
 #ipadmenu ~ #content fieldset[data-input-type=labelfield]>label{max-width:157px;width:157px}
 #ipadmenu ~ #content fieldset[data-input-type=checkbox]>label{width:327px}
 #ipadmenu ~ #content fieldset[data-input-type=textarea]>textarea{width:419px}
-#ipadmenu ~ #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svgz') 372px 14px no-repeat}
+#ipadmenu ~ #content fieldset[data-input-type=radiobutton]>input:checked{background: url('../svg/elements.svg') 372px 14px no-repeat}
 [data-ipadnav="right"]{width:458px}
 }
 /*ipad menu settings*/
