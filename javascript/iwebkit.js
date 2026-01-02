@@ -1,4 +1,4 @@
-//iWebKit 6.0 javascript
+//iWebKit 6.1 javascript
 
 var type;
 var orientation=window.orientation;
@@ -130,7 +130,8 @@ function touchresponse() {
 	};
 
 function ajax(){
-	$('a').live('click', function(e){
+$('a').live('click', function(e){
+    if($(this).hasClass('external')) return;
 		if(($(this).parent().data('ipadnav') == 'left') && $(this).hasClass('generated')){var link = $(this).attr('href');e.preventDefault();ipadmenuintercept(link)}else{
 		if($(this).hasClass('leftnav') | $(this).attr('data-transition') == 'Lslide'){type = 'Lslide'}
 		else if(($(this).hasClass('rightnav')) || ($(this).attr('data-transition') == 'Rslide') || ($(this).parents('nav').attr('data-image-type'))){type = 'Rslide'}
