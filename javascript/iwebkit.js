@@ -203,23 +203,3 @@ $(document).ready(function(){
 	ios4fix();
 })
 window.onorientationchange=updateOrientation;
-$(function() {
-    $('.tab-btn').on('tap click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        $('.tab-btn').removeClass('active');
-        $(this).addClass('active');
-
-        var targetPage = $(this).attr('href');
-        $('.tab-page').removeClass('visible');
-        $(targetPage).addClass('visible');
-      
-        var title = $(this).attr('data-name');
-        $('#nav-title').text(title);
-
-        window.scrollTo(0,0);
-        return false;
-    });
-});  
-    
