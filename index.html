@@ -200,30 +200,6 @@ $(function() {
         return false;
     });
 });
-(function () {
-  var imgs = document.images;
-  for (var i = 0; i < imgs.length; i++) {
-    var img = imgs[i];
-    img._src = img.src;
-    img.src = '';
-  }
-
-  function load() {
-    var y = document.body.scrollTop + window.innerHeight + 80;
-    for (var i = 0; i < imgs.length; i++) {
-      var img = imgs[i];
-      if (!img._src) continue;
-      if (img.offsetTop < y) {
-        img.src = img._src;
-        img._src = null;
-      }
-    }
-  }
-
-  window.onscroll = load;
-  window.onload = load;
-})();
-
 </script>
 
 </body>
