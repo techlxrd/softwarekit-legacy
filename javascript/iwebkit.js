@@ -1,27 +1,7 @@
 //iWebKit 6.1 javascript
 
 var type;
-var orientation=window.orientation;
-//Tabbar
-	$(function() {
-    $('.tab-btn').on('tap click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        $('.tab-btn').removeClass('active');
-        $(this).addClass('active');
-
-        var targetPage = $(this).attr('href');
-        $('.tab-page').removeClass('visible');
-        $(targetPage).addClass('visible');
-      
-        var title = $(this).attr('data-name');
-        $('#nav-title').text(title);
-
-        window.scrollTo(0,0);
-        return false;
-    });
-});	
+var orientation=window.orientation;	
 function ios4fix() {
 		if($.os.version < "5"){
 		if($.os.ipad){$('body > #content').css('margin-top','44px').css('height','auto');};
