@@ -35,28 +35,4 @@ function ios4fix() {
 	window.scrollTo(0,0.9);
 	ios4fix();
 })    
-</script><style>
- /* Prevent the whole screen from bouncing/scrolling */
-html, body {
-    height: 100%;
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-}
-
-/* Make the main container the only scrollable part */
-#main-container {
-    position: absolute;
-    top: 44px; /* Height of your header */
-    bottom: 49px; /* Height of your tab bar */
-    left: 0;
-    right: 0;
-    overflow-y: scroll;
-    /* This enables the smooth 'native' iOS bounce */
-    -webkit-overflow-scrolling: touch; 
-}
-
-/* Remove the padding from earlier since we are using 'bottom: 49px' now */
-#content {
-    padding-bottom: 20px; 
-}  </style></html>
+</script></html>
