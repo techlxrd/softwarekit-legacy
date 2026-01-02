@@ -9,8 +9,7 @@
     <script src="javascript/iwebkit.js"></script>
     <meta name="theme-color" content="#8999AB">
     <title>SoftwareKit Legacy</title>
-     <link rel="apple-touch-icon" href="images/favicon.png">
-    
+     <link rel="apple-touch-icon" href="images/favicon.png">   
     <style>                     
        .home-icon{width:100px;height:100px;border-radius:23.3px;}
       .icon-small{border-radius:5px!important;}
@@ -172,24 +171,6 @@
         <span>JB Repos</span>
     </a>   
 </footer>
-<script>	$(function() {
-    $('.tab-btn').on('tap click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        $('.tab-btn').removeClass('active');
-        $(this).addClass('active');
-
-        var targetPage = $(this).attr('href');
-        $('.tab-page').removeClass('visible');
-        $(targetPage).addClass('visible');
-      
-        var title = $(this).attr('data-name');
-        $('#nav-title').text(title);
-
-        window.scrollTo(0,0);
-        return false;
-    });
-}); </script>
+<script>	</script>
 </body>
 </html>
