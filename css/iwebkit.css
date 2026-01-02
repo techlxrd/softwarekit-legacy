@@ -34,15 +34,17 @@ body>header,body>footer{z-index:100;position:fixed;width:100%}body>header{backgr
 .tab-btn.active {
     color: #ffffff !important;
     background: -webkit-gradient(linear, left top, left bottom, from(#01499a), to(#0276f5));
-    -webkit-box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.8);
+    /* In iOS 6, the selection fills the whole vertical height */
+    height: 100%; 
 }
 
 /* Icon scaling */
 .tab-btn img {
     height: 24px;
+    width: auto;
     display: block;
     margin: 0 auto;
-    pointer-events: none;
 }
 
 .tab-page {
