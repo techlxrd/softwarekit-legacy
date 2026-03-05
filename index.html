@@ -1,335 +1,128 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
-    <title>SoftwareKit</title>
-    <meta name="description" content="System utilities for iOS, Android, and OpenHarmony. Built for people who actually want control over their devices.">
-    <meta name="author" content="TechLxrd">
-    <link rel="icon" type="image/png" href="favicon.png">   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@5.0.5/css/framework7-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <meta name="description" content="System utilities for iOS, Android, and OpenHarmony. Built for people who actually want control over their devices.">
-    <meta name="author" content="TechLxrd">
-    <link rel="canonical" href="https://softwarekit.pages.dev">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://softwarekit.pages.dev">
-    <meta property="og:title" content="SoftwareKit">
-    <meta property="og:description" content="System utilities for iOS, Android, and OpenHarmony. Built for people who actually want control over their devices.">
-    <meta property="og:image" content="favicon.png">
-    <meta name="twitter:card" content="summary"> <meta name="twitter:url" content="https://softwarekit.pages.dev">
-    <meta name="twitter:title" content="SoftwareKit">
-    <meta name="twitter:description" content="System utilities for iOS, Android, and OpenHarmony. Built for people who actually want control over their devices.">
-    <meta name="twitter:image" content="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="css/iwebkit.css" rel="stylesheet" media="screen">
+    <script src="javascript/zepto.min.js"></script>
+    <script src="javascript/iwebkit.js"></script>
+    <meta name="theme-color" content="#8999AB">
+    <title>SoftwareKit Legacy</title>
+    <link rel="apple-touch-icon" href="images/favicon.png">
     <style>
-        :root {
-            --accent: #007AFF;
-            --bg-color: #ffffff;
-            --text-main: #1d1d1f;
-            --text-sub: #86868b;
-            --glass: rgba(255, 255, 255, 0.72);
-            --card-bg: #f5f5f7;
-            --border: rgba(0, 0, 0, 0.08);
-            --nav-height: 52px;
-            --section-pad: 120px;
+        .home-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 23.3px
         }
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #000000;
-                --text-main: #f5f5f7;
-                --text-sub: #86868b;
-                --glass: rgba(22, 22, 23, 0.75);
-                --card-bg: #161617;
-                --border: rgba(255, 255, 255, 0.12);
-            }
+        .icon-small {
+            border-radius: 5px !important
         }
 
-        * { box-sizing: border-box; -webkit-font-smoothing: antialiased; margin: 0; padding: 0; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            overflow-x: hidden;
-            line-height: 1.15;
+        a img {
+            border-radius: 7px
         }
-    
-        nav { position: fixed; top: 15px; left: 0; right: 0; z-index: 9999; display: flex; justify-content: center; pointer-events: none; }
-        .nav-container {
-            pointer-events: auto; width: 90%; max-width: 1000px; height: var(--nav-height);
-            display: flex; align-items: center; justify-content: space-between; padding: 0 24px;
-            background: var(--glass); backdrop-filter: saturate(180%) blur(3px); -webkit-backdrop-filter: saturate(180%) blur(3px);
-            border: 1px solid var(--border); border-radius: 100px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
-        }
-        .nav-brand { font-weight: 700; font-size: 20px; letter-spacing: -0.5px; }     
-        .hero { padding: 180px 20px 80px; text-align: center; max-width: 1100px; margin: 0 auto; }
-        h1 {
-            font-size: clamp(48px, 10vw, 86px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; margin-bottom: 24px;
-            background: linear-gradient(180deg, var(--text-main) 40%, var(--text-sub));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .hero p.lead { font-size: clamp(20px, 4vw, 26px); color: var(--text-sub); font-weight: 500; max-width: 700px; margin: 0 auto 48px; line-height: 1.3; }      
-        .download-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 30px; }
-        .btn-get {
-            background: var(--accent); color: #fff; padding: 14px 28px; border-radius: 980px;
-            font-size: 16px; font-weight: 600; text-decoration: none; display: inline-flex;
-            align-items: center; gap: 10px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .btn-get.alt { background: var(--text-main); color: var(--bg-color); }
-        .btn-get.outline { background: transparent; border: 1.5px solid var(--accent); color: var(--accent); }
-
-        .screenshot-swiper .swiper-slide { background: transparent !important; }
-        .screenshot-swiper img {
-            width: 280px; border-radius: 32px;          
-            background: transparent !important;
-        }
-
-        .bento-section { max-width: 1100px; margin: 0 auto var(--section-pad); display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; padding: 0 24px; }
-        .bento-card {
-            background: var(--card-bg); border-radius: 34px; padding: 48px; grid-column: span 6;
-            border: 1px solid var(--border); display: flex; flex-direction: column; transition: transform 0.3s ease;
-        }
-        .bento-card.full { grid-column: span 12; }
-        .bento-card h3 { font-size: 32px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; } /* Tightened */
-        .bento-card p { font-size: 19px; color: var(--text-sub); line-height: 1.4; }
-        .platform-badge {
-            display: inline-block; padding: 6px 14px; border-radius: 100px; font-size: 11px; font-weight: 700;
-            text-transform: uppercase; margin-bottom: 12px; background: rgba(0, 122, 255, 0.1); color: var(--accent); width: fit-content;
-        }
-      
-.legacy-section {
-            background-image: url("https://i.imgur.com/dmVMy5S.jpeg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-color: #4c566c;
-            padding: 140px 24px;
-            text-align: center;
-            position: relative;
-            box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.6);
-            margin-bottom: var(--section-pad);
-            border-top: 1px dashed rgba(0, 0, 0, 0.3);
-            border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
-        }
-
-        .legacy-section::before,
-        .legacy-section::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            height: 1px;
-        }
-
-        .legacy-section::before {
-            top: -1px;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .legacy-section::after {
-            bottom: -1px;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .legacy-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .legacy-content h2 {
-            font-size: 58px;
-            color: #fff;
-            font-weight: 700;
-            margin-bottom: 24px;
-            text-shadow: 0 -1px 1px rgba(0, 0, 0, 1);
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-
-        .legacy-content p {
-            font-size: 24px;
-            color: #d0d0d0;
-            margin-bottom: 48px;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-        }
-
-        .legacy-icon-container {
-            width: 96px;
-            height: 96px;
-            margin: 0 auto 36px;
-            background: #fff;
-            border-radius: 22px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
-            background: linear-gradient(to bottom, #e6e6e6 0%, #d9d9d9 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .legacy-icon-container::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 50%;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%);
-            border-top-left-radius: 22px;
-            border-top-right-radius: 22px;
-        }
-
-        .ios6-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 18px 42px;
-            font-size: 17px;
-            font-weight: 700;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 12px;
-            border: 1px solid #1c3f7f;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(to bottom, #8ab4f8 0%, #4c87e6 50%, #3369c6 51%, #2a5db5 100%);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 6px 15px -4px rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0, 0, 0, 0.4);
-            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
-            transition: all 0.2s;
-        }
-
-        .ios6-btn:hover {
-            filter: brightness(1.08);
-            transform: translateY(-1px);
-        }
-
-        .ios6-btn:active {
-            background: linear-gradient(to bottom, #2a5db5 0%, #4c87e6 100%);
-            box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 255, 255, 0.1);
-            transform: translateY(2px);
-        }
-
-       
-        .discord-card {
-            background: linear-gradient(145deg, var(--card-bg), #5865F215) !important;
-            border: 1px solid #5865F230 !important;
-            overflow: hidden; position: relative;
-        }
-        .discord-card::after {
-            content: "\F300"; font-family: "bootstrap-icons"; position: absolute;
-            right: -30px; bottom: -30px; font-size: 220px; color: #5865f2; opacity: 0.07;
-        }
-
-        .techlxrd { text-decoration: none; color: var(--accent); font-weight: 500; }
-        footer { padding: 80px 24px; text-align: center; color: var(--text-sub); font-size: 13px; border-top: 1px solid var(--border); }
-
-        @media (max-width: 850px) { .bento-card { grid-column: span 12; } }
     </style>
 </head>
-<body>
 
-    <nav>
-        <div class="nav-container">
-            <div class="nav-brand">SoftwareKit.</div>
-            <a href="https://techlxrd.gumroad.com/l/swkit" class="techlxrd" style="font-size: 13px;"><i class="bi bi-code-slash"></i> Buy source code</a>
-        </div>
-    </nav>
-
-    <main>
-        <section class="hero">
-            <div data-aos="fade-up" class="platform-badge" style="margin: 0 auto 20px;">Introducing SoftwareKit</div>
-            <h1 data-aos="fade-up" data-aos-delay="100">Every device.<br>At its best.</h1>
-            <p class="lead" data-aos="fade-up" data-aos-delay="200">System utilities for iOS, Android, and OpenHarmony. Built for people who actually want control over their devices.</p>
-            <div class="download-grid" data-aos="fade-up" data-aos-delay="300">
-                <a href="ios/app.html" class="btn-get"><i class="bi bi-apple"></i> iOS 14+</a>
-                <a href="android/app.html" class="btn-get alt"><i class="bi bi-android2"></i> Android</a>
-                <a href="openhm/app.html" class="btn-get outline"><i class="bi bi-phone"></i> HarmonyOS 5+</a>
+<body data-ui-type="native">
+    <header>
+        <h1 id="nav-title">Home</h1>
+    </header>
+    <div id="main-container">
+        <section id="view-home" class="tab-page visible">
+            <div id="content">
+                <center><br><br><img src="images/favicon.png" class="home-icon"><br><br><strong>Welcome to SoftwareKit Legacy</strong></center><br>
+                <section>
+                    <article>
+                        <header>
+                            <h3>Introduction:</h3>
+                        </header>
+                        <p>SoftwareKit Legacy lets you unlock the full potential of your older iOS device (iOS 4–9). Access apps, utilities, and jailbreak repositories to customize, tweak, and supercharge your legacy device like never before.</p>
+                    </article>
+                </section>
+                <header>
+                    <h2>Lead developer & owner</h2>
+                </header>
+                <section>
+                    <nav data-image-type="icon"><a class="external" href="https://techlxrd.github.io"><img src="images/techlxrd.png" class="icon-small"><p>TechLxrd</p></a></nav>
+                </section>
+                <header>
+                    <h2>Not a legacy iOS device?</h2>
+                </header>
+                <section>
+                    <nav data-image-type="icon"><a class="external" href="https://softwarekit.pages.dev"><img src="https://softwarekit.pages.dev/favicon.png" class="icon-small"><p>Get SoftwareKit for iOS 14+</p></a></nav>
+                </section>
+                <header>
+                    <h2>Contact</h2>
+                </header>
+                <section>
+                    <nav data-image-type="none">
+                        <a class="external" href="mailto:softwarekit_app@outlook.com">
+                            <p>softwarekit_app@outlook.com</p>
+                        </a>
+                    </nav>
+                                        
             </div>
-            <a href="https://youtu.be/FSN9uIfI9eM" class="techlxrd" data-aos="fade-up"><i class="bi bi-collection-play-fill"></i> Watch the trailer</a>
-        </section>
-
-        <section class="showcase" data-aos="fade-up">
-            <div class="swiper screenshot-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><center><img src="https://i.imgur.com/FnCn8OO.png" alt="iOS"></center></div>
-                    <div class="swiper-slide"><center><img src="https://i.imgur.com/1ObgWnZ.png" alt="Android"></center></div>
-                    <div class="swiper-slide"><center><img src="https://i.imgur.com/2XFFsnt.png" alt="Harmony"></center></div>
-                    <div class="swiper-slide"><center><img src="https://i.imgur.com/kmHughI.png" alt="Legacy"></center></div>
+            </section>
+            
+            <section id="view-apps" class="tab-page">
+                <div id="content"><br>
+                    <section>
+                        <nav data-image-type="thumbnail"><a class="external" href="https://tlsroot.litten.ca/"><img src="images/default.png" alt="icon"><small>Safari & iCloud TLS Fix</small><p>Hanabi's Updated Root CA's</p></a></nav>
+                        <nav data-image-type="thumbnail"><a class="external" href="https://mtmdev.org/webapp"><img src="https://mtmdev.org/webapp/pics/homescreen.gif" alt="icon"><small>Legacy apps</small><p>Momentum Store</p></a></nav>         <nav data-image-type="thumbnail"><a class="external" href="https://chatgptlegacy.com/"><img src="https://chatgptlegacy.com/assets/ico/apple-touch-icon-144-precomposed.png" alt="icon"><small>Legacy ChatGPT</small><p>ChatGPT</p></a></nav>         <nav data-image-type="thumbnail"><a class="external" href="https://bag-xml.com/projects/discord-classic/"><img src="https://bag-xml.com/assets/img/discord.png" alt="icon"><small>Discord Classic</small><p>Classic Discord app</p></a></nav>
                 </div>
-                <br><div class="swiper-pagination"></div>
-            </div>
-        </section>
-
-        <section class="bento-section">
-            <div class="bento-card full" data-aos="fade-up">
-                <span class="platform-badge">Universal Architecture</span>
-                <h3>Designed for Every OS.</h3>
-                <p>SoftwareKit is built to feel almost native on every OS.</p>
-                <div style="margin-top: 40px; display: flex; gap: 40px; font-size: 48px;">
-                    <i class="bi bi-apple"></i><i class="bi bi-android2" style="color: #3DDC84;"></i><i class="bi bi-phone" style="color: #007AFF;"></i>
-                </div>
-            </div>
-
-            <div class="bento-card" data-aos="fade-up">
-                <span class="platform-badge">iOS & AltStore</span>
-                <h3>Sideloading, Perfected.</h3>
-                <p>Integrated AltStore source support and Signer. Browse and download IPAs from your favorite sources, with instant loading even at massive scale.</p>
-                <br><a class="techlxrd" href="altstore://source?url=https://softwarekit.pages.dev/ios/altstore.json">Add our AltStore source →</a>
-            </div>
-
-            <div class="bento-card" data-aos="fade-up">
-                <span class="platform-badge">HarmonyOS & Android</span>
-                <h3>Native Control.</h3>
-                <p>HarmonyOS support built for Huawei devices, with full Material You control on Android.</p>
-            </div>
-        </section>
-
-        <section class="legacy-section">
-            <div class="legacy-content" data-aos="zoom-in">
-                <div class="legacy-icon-container">
-                    <i class="f7-icons" style="font-size: 60px; color: #4c566c;">cube_box_fill</i>
-                </div>
-                <span class="platform-badge" style="background: rgba(255,255,255,0.15); color: #fff;">One more thing...</span>
-                <h2>Legacy iOS Support.</h2>
-                <p style="color: #eee; max-width: 600px; margin: 0 auto 30px;">We haven’t forgotten the classics. iOS 4 through iOS 9 are fully supported, bringing modern power to the devices that started it all.</p>
-                <a href="https://softwarekit-legacy.pages.dev" class="ios6-btn">
-                    <i class="bi bi-download"></i> SoftwareKit Legacy
-                </a>
-            </div>
-        </section>
-
-        <section class="bento-section">
-            <div class="bento-card full discord-card" data-aos="fade-up">
-                <span class="platform-badge" style="background: #5865F220; color: #5865F2;">Community</span>
-                <h3>Join the Server.</h3>
-                <p style="max-width: 500px;">Need help or have suggestions? Join our Discord server to stay updated with the community.</p>
-                <br>
-                <center><a href="https://discord.gg/xMF38FamGg" class="btn-get" style="background: #5865F2; width: fit-content; z-index: 1;font-size:15px;justify-content:center;align-items:center;">
-                    <i class="bi bi-discord"></i> Join Discord Server
-                </a></center>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p style="opacity: 0.6; margin-bottom: 20px; max-width: 800px; margin: 0 auto 20px;">SoftwareKit is a non-commercial system utility. Trademarks belong to their respective owners.</p>
-        <p>Built with ❤️ by <a href="https://techlxrd.github.io" class="techlxrd">TechLxrd</a></p>
-        <p style="margin-top: 8px;">© 2026 SoftwareKit • softwarekit_app@outlook.com</p>
+                </section>
+                <section id="view-repos" class="tab-page">
+                    <div id="content"><br>
+                        <section>
+                            <nav data-image-type="thumbnail"><a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://7bubbl3s.github.io"><img src="images/default.png" alt="icon"><small>https://7bubbl3s.github.io</small><p>7bubbl3s Repo</p></a><a class="external"
+                                    href="cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.skyglow.es"><img src="images/skyglow.png" alt="icon"><small>https://cydia.skyglow.es</small><p>SkyGlow Cydia Repo</p></a><a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://aoiblog.jp"><img src="images/default.png" alt="icon"><small>https://aoiblog.jp</small><p>satou_aoi Cydia Repo</p></a>
+                                <a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://pwnage.dev"><img src="images/default.png" alt="icon"><small>https://pwnage.dev</small>
+                                    <p>Pwnage Archive</p>
+                                    </a><a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.nekokawa.net"><img src="images/default.png" alt="icon"><small>https://cydia.nekokawa.net</small><p>nekokawa Cydia Repo</p></a>
+                                <a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://7bubbl3s.github.io"><img src="images/default.png" alt="icon"><small>https://7bubbl3s.github.io</small>
+                                        <p>ModMyi (Archive)</p>
+                                        </a><a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://lukezgd.github.io/repo"><img src="images/default.png" alt="icon"><small>https://lukezgd.github.io/repo</small><p>LukeZGD's Repo</p></a>
+                                <a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://albyvar.github.io/legacyrepo"><img src="images/default.png" alt="icon"><small>https://albyvar.github.io/legacyrepo</small>
+                                            <p>Legacy iOS Repo</p>
+                                            </a><a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.invoxiplaygames.uk"><img src="https://cydia.invoxiplaygames.uk/CydiaIcon.png" alt="icon"><small>https://cydia.invoxiplaygames.uk</small><p>IPG's Cydia Repo</p></a>
+                                <a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.invoxiplaygames.uk/beta"><img src="https://cydia.invoxiplaygames.uk/CydiaIcon.png" alt="icon"><small>https://cydia.invoxiplaygames.uk/beta</small>
+                                                <p>IPG's Beta Cydia Repo</p>
+                                                </a><a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://yzu.moe/dev"><img src="https://yzu.moe/dev/CydiaIcon2.png" alt="icon"><small>https://yzu.moe/dev</small><p>Electimon's Repo</p></a>
+                                <a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://repo.bibitech.cc"><img src="images/default.png" alt="icon"><small>https://repo.bibitech.cc</small>
+                                                    <p>BibiTech</p>
+                                                    </a><a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.bag-xml.com"><img src="https://cydia.bag-xml.com/assets/ico/apple-touch-icon-144-precomposed.png" alt="icon"><small>https://cydia.bag-xml.com</small><p>bag.xml's repo</p></a><a class="external" href="cydia://url/https://cydia.saurik.com/api/share#?source=http://apt.philippe97.ca/"><img src="images/default.png" alt="icon"><small>http://apt.philippe97.ca</small><p>Source de Philippe97</p></a></nav>
+                    </div>
+                    </section>
+    </div>
+    <footer id="tabbar-fixed"><a href="#view-home" class="tab-btn active external" data-name="Home"><img src="svg/bookmark.svg"><span>Home</span></a><a href="#view-apps" class="tab-btn external" data-name="Apps & Utilities"><img src="svg/tabs.svg"><span>Apps & Utils</span></a>
+        <a href="#view-repos" class="tab-btn external" data-name="Jailbreak Repositories"><img src="svg/plus.svg"><span>JB Repos</span></a>
     </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="techlxrd07" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-    <script>
-        AOS.init({ duration: 1000 });
-        new Swiper('.screenshot-swiper', {
-            loop: true, centeredSlides: true, slidesPerView: 'auto', spaceBetween: 20,
-            autoplay: { delay: 3000 }, pagination: { el: '.swiper-pagination', clickable: true }
-        });
-    </script>
 </body>
+<script>
+    $(function() {
+        $('.tab-btn').on('tap click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            $('.tab-btn').removeClass('active');
+            $(this).addClass('active');
+
+            var targetPage = $(this).attr('href');
+            $('.tab-page').removeClass('visible');
+            $(targetPage).addClass('visible');
+
+            var title = $(this).attr('data-name');
+            $('#nav-title').text(title);
+
+
+            return false;
+        });
+    });
+</script>
+
 </html>
